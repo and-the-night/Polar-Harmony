@@ -1,4 +1,5 @@
-let state = 'mouse'
+let state = 'mouse';
+let isPlaying = false;
 
 let wave1;
 let wave2;
@@ -86,27 +87,39 @@ function setup() {
   wave1.setType('sine');
   wave1.amp(1);
   wave1.freq(300);
-  wave1.start();
   wave1.pan(1);
   
   wave2 = new p5.Oscillator();
   wave2.setType('sine');
   wave2.amp(1);
   wave2.freq(300);
-  wave2.start();
   wave2.pan(-1);
-  
-  let mouseBtn = createButton('MOUSE');
-  mouseBtn.mousePressed(() => {
+
+  const playButton = document.getElementById('play-btn');
+  playButton.addEventListener('click', () => {
+    if(isPlaying) {
+      wave1.stop();
+      wave2.stop();
+      isPlaying = false;
+      playButton.innerHTML = '►';
+    } else {
+      wave1.start();
+      wave2.start();
+      isPlaying = true;
+      playButton.innerHTML = '❚❚';
+    }
+  });
+
+  const mouseBtn = document.getElementById('mode-btn');
+  mouseBtn.addEventListener('click', () => {
     state = 'mouse'; 
-    console.log('state', state);
   })
   
   let intervalButtons = []
   
   for(let i = 0; i < intervals.length; i++) {
-    intervalButtons[i] = createButton(intervals[i].title);
-    intervalButtons[i].mousePressed(() => {
+    intervalButtons[i] = document.getElementById(intervals[i].title);
+    intervalButtons[i].addEventListener('click', () => {
       state = 'interval';
       let ratio = intervals[i].num / intervals[i].den;
       let maxLowerFreq = Math.floor(400 / ratio);

@@ -8,10 +8,42 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+    <title>Polar Harmony</title>
   </head>
   <body>
+    <div class="title-wrapper">
+      <h1>Polar Harmony</h1>
+      <p>Explore harmony through polar coordinates. Upon pressing 'Play' you will hear two sounds in two different frequencies, and the ratio between them will be presented in polar coordinates (learn more about polar coordinates <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system">here</a>). Move the mouse on the screen to create different ratios and hear different harmonies. You can also create fixed ratios or intervals by clicking them (learn more about interval ratios <a href="https://en.wikipedia.org/wiki/Interval_ratio">here</a>). Notice how different intervals produce different shapes, for instance, Unison (P1) always produces a circle. Click the 'Mouse' button to return to free movement.</p>
+      <div id="play-wrapper"></h2>
+        <button id="play-btn">►</button>
+        <button id="mode-btn">MOUSE</button>
+      </div>
+      <div id="buttons-wrapper">
+        <h2>Intervals</h2>
+        <button id="P1">P1</button>
+        <button id="m2">m2</button>
+        <button id="M2">M2</button>
+        <button id="m3">m3</button>
+        <button id="M3">M3</button>
+        <button id="P4">P4</button>
+        <button id="TT">TT</button>
+        <button id="P5">P5</button>
+        <button id="m6">m6</button>
+        <button id="M6">M6</button>
+        <button id="m7">m7</button>
+        <button id="M7">M7</button>
+        <button id="P8">P8</button>
+      </div>
+    </div>
     <main>
     </main>
+
     <script src="sketch.js"></script>
   </body>
 </html>

@@ -2,10 +2,61 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
 canvas {
   display: block;
+  margin: 40px;
+}
+
+a {
+  color: black;
+  transition: all 250ms;
+}
+
+a:hover {
+  color: grey;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 40px;
+}
+
+.title-wrapper h1,
+.title-wrapper h2 {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.title-wrapper p {
+  font-family: 'Funnel Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 30px;
+  line-height: 30px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 button {
+  min-width: 100px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
   margin: 6px 3px;
 }
